@@ -1,0 +1,34 @@
+2025-01-04 14:31:36,080 - INFO - Loading configuration from /Users/pukpuk/Dev/video-split/scenedetect.cfg
+2025-01-04 14:31:36,081 - INFO - Output directory set to: output
+2025-01-04 14:32:38,407 - INFO - Starting to process file 1/1: download (6).mp4
+2025-01-04 14:32:38,408 - ERROR - Error in scene detection: AdaptiveDetector.__init__() got an unexpected keyword argument 'threshold'
+2025-01-04 14:32:38,408 - ERROR - Error processing download (6).mp4: AdaptiveDetector.__init__() got an unexpected keyword argument 'threshold'
+Traceback (most recent call last):
+  File "/Users/pukpuk/Dev/video-split/video_scene_detector.py", line 188, in process_video
+    scenes = self._detect_scenes_optimized(video_path, threshold, scene_progress)
+  File "/Users/pukpuk/Dev/video-split/video_scene_detector.py", line 255, in _detect_scenes_optimized
+    AdaptiveDetector(threshold=threshold),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+TypeError: AdaptiveDetector.__init__() got an unexpected keyword argument 'threshold'
+2025-01-04 14:33:06,335 - INFO - Processing 1 files from /Users/pukpuk/Desktop/帶貨達人課程/0-1秒 結果展示
+2025-01-04 14:33:06,342 - INFO - Starting to process file 1/1: download (3).mp4
+2025-01-04 14:33:06,342 - ERROR - Error in scene detection: AdaptiveDetector.__init__() got an unexpected keyword argument 'threshold'
+2025-01-04 14:33:06,342 - ERROR - Error processing download (3).mp4: AdaptiveDetector.__init__() got an unexpected keyword argument 'threshold'
+Traceback (most recent call last):
+  File "/Users/pukpuk/Dev/video-split/video_scene_detector.py", line 188, in process_video
+    scenes = self._detect_scenes_optimized(video_path, threshold, scene_progress)
+  File "/Users/pukpuk/Dev/video-split/video_scene_detector.py", line 255, in _detect_scenes_optimized
+    AdaptiveDetector(threshold=threshold),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+TypeError: AdaptiveDetector.__init__() got an unexpected keyword argument 'threshold'
+2025-01-04 14:33:06,364 - INFO - Statistics saved to output/processing_stats.json
+2025-01-04 14:35:49,323 - INFO - Starting to process file 1/1: download.mp4
+2025-01-04 14:35:49,325 - ERROR - Error in scene detection: AdaptiveDetector.__init__() got an unexpected keyword argument 'threshold'
+2025-01-04 14:35:49,325 - ERROR - Error processing download.mp4: AdaptiveDetector.__init__() got an unexpected keyword argument 'threshold'
+Traceback (most recent call last):
+  File "/Users/pukpuk/Dev/video-split/video_scene_detector.py", line 188, in process_video
+    scenes = self._detect_scenes_optimized(video_path, threshold, scene_progress)
+  File "/Users/pukpuk/Dev/video-split/video_scene_detector.py", line 255, in _detect_scenes_optimized
+    AdaptiveDetector(adaptive_threshold=threshold),  # Updated parameter name
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AdaptiveDetector.__init__() got an unexpected keyword argument 'threshold'

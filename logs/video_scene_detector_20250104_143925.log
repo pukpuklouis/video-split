@@ -1,0 +1,15 @@
+2025-01-04 14:39:25,684 - INFO - Loading configuration from /Users/pukpuk/Dev/video-split/scenedetect.cfg
+2025-01-04 14:39:25,685 - INFO - Output directory set to: output
+2025-01-04 14:39:39,035 - INFO - Starting to process file 1/1: download.mp4
+2025-01-04 14:39:39,035 - ERROR - Error in scene detection: detect() got an unexpected keyword argument 'progress_callback'
+2025-01-04 14:39:39,035 - ERROR - Error processing download.mp4: detect() got an unexpected keyword argument 'progress_callback'
+Traceback (most recent call last):
+  File "/Users/pukpuk/Dev/video-split/video_scene_detector.py", line 188, in process_video
+    scenes = self._detect_scenes_optimized(video_path, threshold, scene_progress)
+  File "/Users/pukpuk/Dev/video-split/video_scene_detector.py", line 253, in _detect_scenes_optimized
+    scenes = detect(
+        video_path,
+    ...<2 lines>...
+        show_progress=False  # We're using our own progress bar
+    )
+TypeError: detect() got an unexpected keyword argument 'progress_callback'

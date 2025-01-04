@@ -1,2 +1,2 @@
 scenedetect>=0.6.1
-tk>=0.1.0
+tqdm>=4.65.0

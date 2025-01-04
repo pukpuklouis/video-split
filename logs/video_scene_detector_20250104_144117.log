@@ -1,0 +1,5 @@
+2025-01-04 14:41:17,521 - INFO - Loading configuration from /Users/pukpuk/Dev/video-split/scenedetect.cfg
+2025-01-04 14:41:17,522 - INFO - Output directory set to: output
+2025-01-04 14:41:45,700 - INFO - Starting to process file 1/1: download.mp4
+2025-01-04 14:41:45,702 - ERROR - Error in scene detection: argument of type 'PosixPath' is not iterable
+2025-01-04 14:41:45,702 - ERROR - Error processing download.mp4: argument of type 'PosixPath' is not iterable
