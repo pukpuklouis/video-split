@@ -2,6 +2,39 @@
 
 import os
 import sys
+import subprocess
+from pathlib import Path
+
+def ensure_venv():
+    """Ensure running in virtual environment and all dependencies are installed."""
+    script_dir = Path(os.path.dirname(os.path.abspath(__file__)))
+    venv_dir = script_dir / 'venv'
+    
+    # Create venv if it doesn't exist
+    if not venv_dir.exists():
+        subprocess.run([sys.executable, '-m', 'venv', str(venv_dir)], check=True)
+    
+    # Get the path to the venv Python interpreter
+    if sys.platform == 'win32':
+        venv_python = venv_dir / 'Scripts' / 'python.exe'
+    else:
+        venv_python = venv_dir / 'bin' / 'python'
+    
+    # If we're not in the venv, restart script with venv Python
+    if not hasattr(sys, 'real_prefix') and not (hasattr(sys, 'base_prefix') and sys.base_prefix != sys.prefix):
+        requirements_file = script_dir / 'requirements.txt'
+        
+        # Install requirements
+        subprocess.run([str(venv_python), '-m', 'pip', 'install', '-r', str(requirements_file)], check=True)
+        
+        # Restart the script with the venv Python
+        os.execv(str(venv_python), [str(venv_python), __file__] + sys.argv[1:])
+
+# Call ensure_venv at the start
+ensure_venv()
+
+import os
+import sys
 import configparser
 import logging
 import json
