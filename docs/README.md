@@ -2,7 +2,7 @@
 
 A Python-based tool for automatically detecting and splitting video files into scenes using PySceneDetect.
 
-[中文版](docs/README.zh-TW.md)
+[中文版](README.zh-TW.md)
 
 
 
