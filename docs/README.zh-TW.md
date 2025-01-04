@@ -2,6 +2,8 @@
 
 這是一個基於 Python 的工具，使用 PySceneDetect 自動偵測並分割影片場景。
 
+[English Ver.](docs/README.md)
+
 ## 功能特色
 
 - **處理選項**：
